@@ -1,0 +1,332 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jun 06, 2021 at 07:37 AM
+-- Server version: 10.4.14-MariaDB-cll-lve
+-- PHP Version: 7.2.34
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `u858575291_mycodedetail`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `world_country`
+--
+
+CREATE TABLE `world_country` (
+  `id` int(11) NOT NULL,
+  `c_name` varchar(128) NOT NULL,
+  `c_slug` varchar(256) NOT NULL,
+  `c_al_2_code` varchar(16) NOT NULL,
+  `c_al_3_code` varchar(32) NOT NULL,
+  `c_numeric_code` varchar(16) NOT NULL,
+  `c_dialling_code` varchar(16) NOT NULL,
+  `c_currency_code_alpha` varchar(16) NOT NULL,
+  `c_capital` varchar(128) NOT NULL,
+  `c_continent` varchar(16) NOT NULL,
+  `c_internet_user` varchar(256) NOT NULL,
+  `c_phones` varchar(256) NOT NULL,
+  `c_timezone_in_capital` varchar(128) NOT NULL,
+  `c_tld` varchar(32) NOT NULL,
+  `c_languages` varchar(128) NOT NULL,
+  `c_population` varchar(256) NOT NULL COMMENT 'Population in thousands (2017)',
+  `c_surface_area` varchar(256) NOT NULL COMMENT 'Surface area (km2)',
+  `c_exit_code` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `world_country`
+--
+
+INSERT INTO `world_country` (`id`, `c_name`, `c_slug`, `c_al_2_code`, `c_al_3_code`, `c_numeric_code`, `c_dialling_code`, `c_currency_code_alpha`, `c_capital`, `c_continent`, `c_internet_user`, `c_phones`, `c_timezone_in_capital`, `c_tld`, `c_languages`, `c_population`, `c_surface_area`, `c_exit_code`) VALUES
+(301, 'Angola', 'angola', 'AO', 'AGO', '24', '244', 'AOA', 'Luanda', 'Africa', '606700', '9800000', 'Africa/Luanda', '.ao', 'pt-AO', '29784', '1246700', '{ \"default\" : \"0\"}'),
+(302, 'Anguilla', 'anguilla', 'AI', 'AIA', '660', '1-264', 'XCD', 'The Valley', 'North America', '3700', '26000', 'America/Anguilla', '.ai', 'en-AI', '15', '91', '{ \"default\" : \"11\"}'),
+(303, 'Antarctica', 'antarctica', 'AQ', 'ATA', '10', '672', '', '', 'Antarctica', '', '', 'Antarctica/Troll', '.aq', '', '', '', ''),
+(304, 'Antigua & Barbuda', 'antigua-and-barbuda', 'AG', 'ATG', '28', '1-268', 'XCD', 'St. John\'s', 'North America', '65000', '179800', 'America/Antigua', '.ag', 'en-AG', '', '', ''),
+(305, 'Argentina', 'argentina', 'AR', 'ARG', '32', '54', 'ARS', 'Buenos Aires', 'South America', '13694000', '58600000', 'America/Argentina/Buenos_Aires', '.ar', 'es-AR,en,it,de,fr,gn', '44271', '2780400', '{ \"default\" : \"0\"}'),
+(306, 'Armenia', 'armenia', 'AM', 'ARM', '51', '374', 'AMD', 'Yerevan', 'Asia', '208200', '3223000', 'Asia/Yerevan', '.am', 'hy', '2930', '29743', '{ \"default\" : \"0\"}'),
+(307, 'Aruba', 'aruba', 'AW', 'ABW', '533', '297', 'AWG', 'Oranjestad', 'North America', '24000', '135000', 'America/Aruba', '.aw', 'nl-AW,es,en', '105', '180', '{ \"default\" : \"0\"}'),
+(308, 'Australia', 'australia', 'AU', 'AUS', '36', '61', 'AUD', 'Canberra', 'Oceania', '15810000', '24400000', 'Australia/Sydney', '.au', 'en-AU', '24451', '7692060', '{ \"default\" : \"11\"}'),
+(309, 'Austria', 'austria', 'AT', 'AUT', '40', '43', 'EUR', 'Vienna', 'Europe', '6143000', '13590000', 'Europe/Vienna', '.at', 'de-AT,hr,hu,sl', '8736', '83871', '{ \"default\" : \"0\"}'),
+(310, 'Azerbaijan', 'azerbaijan', 'AZ', 'AZE', '31', '994', 'AZN', 'Baku', 'Asia', '2420000', '10125000', 'Asia/Baku', '.az', 'az,ru,hy', '9828', '86600', '{ \"default\" : \"0\"}'),
+(311, 'Bahamas', 'bahamas', 'BS', 'BHS', '44', '1-242', 'BSD', 'Nassau', 'North America', '115800', '254000', 'America/Nassau', '.bs', 'en-BS', '395', '13940', '{ \"default\" : \"11\"}'),
+(312, 'Bahrain', 'bahrain', 'BH', 'BHR', '48', '973', 'BHD', 'Manama', 'Asia', '419500', '2125000', 'Asia/Bahrain', '.bh', 'ar-BH,en,fa,ur', '1493', '771', '{ \"default\" : \"0\"}'),
+(313, 'Bangladesh', 'bangladesh', 'BD', 'BGD', '50', '880', 'BDT', 'Dhaka', 'Asia', '617300', '97180000', 'Asia/Dhaka', '.bd', 'bn-BD,en', '164670', '147570', '{ \"default\" : \"0\"}'),
+(314, 'Barbados', 'barbados', 'BB', 'BRB', '52', '1-246', 'BBD', 'Bridgetown', 'North America', '188000', '347000', 'America/Barbados', '.bb', 'en-BB', '286', '431', '{ \"default\" : \"11\"}'),
+(315, 'Belarus', 'belarus', 'BY', 'BLR', '112', '375', 'BYR', 'Minsk', 'Europe', '2643000', '10675000', 'Europe/Minsk', '.by', 'be,ru', '9468', '207600', '{ \"default\" : \"810\"}'),
+(316, 'Belgium', 'belgium', 'BE', 'BEL', '56', '32', 'EUR', 'Brussels', 'Europe', '8113000', '12880000', 'Europe/Brussels', '.be', 'nl-BE,fr-BE,de-BE', '11429', '30528', '{ \"default\" : \"0\"}'),
+(317, 'Belize', 'belize', 'BZ', 'BLZ', '84', '501', 'BZD', 'Belmopan', 'North America', '36000', '164200', 'America/Belize', '.bz', 'en-BZ,es', '375', '22966', '{ \"default\" : \"0\"}'),
+(318, 'Benin', 'benin', 'BJ', 'BEN', '204', '229', 'XOF', 'Porto-Novo', 'Africa', '200100', '8408000', 'Africa/Porto-Novo', '.bj', 'fr-BJ', '11176', '114763', '{ \"default\" : \"0\"}'),
+(319, 'Bermuda', 'bermuda', 'BM', 'BMU', '60', '1-441', 'BMD', 'Hamilton', 'North America', '54000', '91000', 'Atlantic/Bermuda', '.bm', 'en-BM,pt', '61', '53', '{ \"default\" : \"11\"}'),
+(320, 'Bhutan', 'bhutan', 'BT', 'BTN', '64', '975', 'INR', 'Thimphu', 'Asia', '50000', '560000', 'Asia/Thimphu', '.bt', 'dz', '808', '38394', '{ \"default\" : \"0\"}'),
+(321, 'Bolivia', 'bolivia', 'BO', 'BOL', '68', '591', 'BOB', 'Sucre', 'South America', '1103000', '9494000', 'America/La_Paz', '.bo', 'es-BO,qu,ay', '', '', '{ \"default\" : \"0\"}'),
+(322, 'Bosnia', 'bosnia', 'BA', 'BIH', '70', '387', 'BAM', 'Sarajevo', 'Europe', '1422000', '3350000', 'Europe/Sarajevo', '.ba', 'bs,hr-BA,sr-BA', '', '', ''),
+(323, 'Botswana', 'botswana', 'BW', 'BWA', '72', '267', 'BWP', 'Gaborone', 'Africa', '120000', '3082000', 'Africa/Gaborone', '.bw', 'en-BW,tn-BW', '2292', '582000', '{ \"default\" : \"0\"}'),
+(324, 'Bouvet Island', 'bouvet-island', 'BV', 'BVT', '74', '47', '', '', 'AN', '', '', '', '.bv', '', '', '', ''),
+(325, 'Brazil', 'brazil', 'BR', 'BRA', '76', '55', 'BRL', 'Brasilia', 'South America', '75982000', '248324000', 'America/Sao_Paulo', '.br', 'pt-BR,es,en,fr', '209288', '8515767', '{ \"default\" : \"00XX\", \"carrier\": {\"14\" : \"Brasil Telecom\", \"15\" : \"Telefonica\", \"21\" : \"Embratel\", \"23\" : \"Intelig\", \"31\" : \"Telmar\"  } }'),
+(326, 'British Indian Ocean Territory', 'british-indian-ocean-territory', 'IO', 'IOT', '86', '246', '', 'Diego Garcia', 'Asia', '', '', 'Indian/Chagos', '.io', 'en-IO', '', '', ''),
+(327, 'British Virgin Islands', 'british-virgin-islands', 'VG', 'VGB', '92', '1-284', 'USD', 'Road Town', 'North America', '4000', '48700', 'America/Tortola', '.vg', 'en-VG', '31', '151', '{ \"default\" : \"11\"}'),
+(328, 'Brunei', 'brunei', 'BN', 'BRN', '96', '673', 'BND', 'Bandar Seri Begawan', 'Asia', '314900', '469700', 'Asia/Brunei', '.bn', 'ms-BN,en-BN', '', '', '{ \"default\" : \"0\"}'),
+(329, 'Bulgaria', 'bulgaria', 'BG', 'BGR', '100', '359', 'BGN', 'Sofia', 'Europe', '3395000', '10780000', 'Europe/Sofia', '.bg', 'bg,tr-BG,rom', '7085', '111002', '{ \"default\" : \"0\"}'),
+(330, 'Burkina Faso', 'burkina-faso', 'BF', 'BFA', '854', '226', 'XOF', 'Ouagadougou', 'Africa', '178100', '9980000', 'Africa/Ouagadougou', '.bf', 'fr-BF', '19193', '272967', '{ \"default\" : \"0\"}'),
+(331, 'Burundi', 'burundi', 'BI', 'BDI', '108', '257', 'BIF', 'Bujumbura', 'Africa', '157800', '2247000', 'Africa/Bujumbura', '.bi', 'fr-BI,rn', '10864', '27830', '{ \"default\" : \"0\"}'),
+(332, 'Cambodia', 'cambodia', 'KH', 'KHM', '116', '855', 'KHR', 'Phnom Penh', 'Asia', '78500', '19100000', 'Asia/Phnom_Penh', '.kh', 'km,fr,en', '16005', '181035', '{ \"default\" : \"001, 007, 008\" }'),
+(333, 'Cameroon', 'cameroon', 'CM', 'CMR', '120', '237', 'XAF', 'Yaounde', 'Africa', '749600', '13100000', 'Africa/Douala', '.cm', 'en-CM,fr-CM', '24054', '475650', '{ \"default\" : \"0\"}'),
+(334, 'Canada', 'canada', 'CA', 'CAN', '124', '1', 'CAD', 'Ottawa', 'North America', '26960000', '26263000', 'America/Toronto', '.ca', 'en-CA,fr-CA,iu', '36624', '9984670', '{ \"default\" : \"11\"}'),
+(335, 'Cape Verde', 'cape-verde', 'CV', 'CPV', '132', '238', 'CVE', 'Praia', 'Africa', '150000', '425300', 'Atlantic/Cape_Verde', '.cv', 'pt-CV', '', '', '{ \"default\" : \"0\"}'),
+(336, 'Caribbean Netherlands', 'caribbean-netherlands', 'BQ', 'BES', '535', '599', 'USD', '', 'NA', '', '', '', '.bq', 'nl,pap,en', '', '', ''),
+(337, 'Cayman Islands', 'cayman-islands', 'KY', 'CYM', '136', '1-345', 'KYD', 'George Town', 'North America', '23000', '96300', 'America/Cayman', '.ky', 'en-KY', '62', '264', '{ \"default\" : \"11\"}'),
+(338, 'Central African Republic', 'central-african-republic', 'CF', 'CAF', '140', '236', 'XAF', 'Bangui', 'Africa', '22600', '1070000', 'Africa/Bangui', '.cf', 'fr-CF,sg,ln,kg', '4659', '622984', '{ \"default\" : \"0\"}'),
+(339, 'Chad', 'chad', 'TD', 'TCD', '148', '235', 'XAF', 'N\'Djamena', 'Africa', '168100', '4200000', 'Africa/Ndjamena', '.td', 'fr-TD,ar-TD,sre', '14900', '1284000', '{ \"default\" : \"0\"}'),
+(340, 'Chile', 'chile', 'CL', 'CHL', '152', '56', 'CLP', 'Santiago', 'South America', '7009000', '24130000', 'America/Santiago', '.cl', 'es-CL', '18055', '756102', '{ \"default\" : \"1XX\", \"carrier\": {\"23\" : \"Entel\", \"20\" : \"Globus\", \"22\" : \"Manquehue\", \"81\" : \"Movistar\", \"69\" : \"Netline\" } }'),
+(341, 'China', 'china', 'CN', 'CHN', '156', '86', 'CNY', 'Beijing', 'Asia', '389000000', '1100000000', 'Asia/Shanghai', '.cn', 'zh-CN,yue,wuu,dta,ug,za', '1409517', '9600000', '{ \"default\" : \"0\"}'),
+(342, 'Christmas Island', 'christmas-island', 'CX', 'CXR', '162', '61', '', 'Flying Fish Cove', 'Asia', '464', '', 'Indian/Christmas', '.cx', 'en,zh,ms-CC', '', '', ''),
+(343, 'Cocos (Keeling) Islands', 'cocos-keeling-islands', 'CC', 'CCK', '166', '61', '', 'West Island', 'Asia', '', '', 'Indian/Cocos', '.cc', 'ms-CC,en', '', '', ''),
+(344, 'Colombia', 'colombia', 'CO', 'COL', '170', '57', 'COP', 'Bogota', 'South America', '22538000', '49066000', 'America/Bogota', '.co', 'es-CO', '49066', '1141748', '{ \"default\" :  \"00X[XX]\", \"carrier\": {\"5\" : \"UNE EPM\", \"7\" : \"ETB\", \"9\" : \"Movistar\", \"414\" : \"Tigo\", \"468\" : \"Avantel\", \"456\" : \"Claro Fixed\", \"444\" : \"Claro Mobile\"}}\r\n'),
+(345, 'Comoros', 'comoros', 'KM', 'COM', '174', '269', 'KMF', 'Moroni', 'Africa', '24300', '250000', 'Indian/Comoro', '.km', 'ar,fr-KM', '814', '2235', '{ \"default\" : \"0\"}'),
+(346, 'Congo - Brazzaville', 'congo-brazzaville', 'CG', 'COG', '178', '242', 'XAF', 'Brazzaville', 'Africa', '245200', '4283000', 'Africa/Brazzaville', '.cg', 'fr-CG,kg,ln-CG', '', '', ''),
+(347, 'Congo - Kinshasa', 'congo-kinshasa', 'CD', 'COD', '180', '243', '', 'Kinshasa', 'Africa', '290000', '19487000', 'Africa/Kinshasa', '.cd', 'fr-CD,ln,kg', '', '', ''),
+(348, 'Cook Islands', 'cook-islands', 'CK', 'COK', '184', '682', 'NZD', 'Avarua', 'Oceania', '6000', '7800', 'Pacific/Rarotonga', '.ck', 'en-CK,mi', '17', '236', '{ \"default\" : \"0\"}'),
+(349, 'Costa Rica', 'costa-rica', 'CR', 'CRI', '188', '506', 'CRC', 'San Jose', 'North America', '1485000', '6151000', 'America/Costa_Rica', '.cr', 'es-CR,en', '4906', '51100', '{ \"default\" : \"0\"}'),
+(350, 'Croatia', 'croatia', 'HR', 'HRV', '191', '385', 'HRK', 'Zagreb', 'Europe', '2234000', '4970000', 'Europe/Zagreb', '.hr', 'hr-HR,sr', '4189', '56594', '{ \"default\" : \"0\"}'),
+(351, 'Cuba', 'cuba', 'CU', 'CUB', '192', '53', 'CUP', 'Havana', 'North America', '1606000', '1682000', 'America/Havana', '.cu', 'es-CU', '11485', '109884', '{ \"default\" : \"0\"}'),
+(352, 'CuraÃ§ao', 'curaassao', 'CW', 'CUW', '531', '599', 'ANG', 'Willemstad', 'North America', '', '', 'America/Curacao', '.cw', 'nl,pap', '', '', ''),
+(353, 'Cyprus', 'cyprus', 'CY', 'CYP', '196', '357', 'EUR', 'Nicosia', 'Europe', '433900', '1110000', 'Asia/Nicosia', '.cy', 'el-CY,tr-CY,en', '1180', '9251', '{ \"default\" : \"0\"}'),
+(354, 'Czech Republic', 'czech-republic', 'CZ', 'CZE', '203', '420', '', 'Prague', 'Europe', '6681000', '12973000', 'Europe/Prague', '.cz', 'cs,sk', '', '', '{ \"default\" : \"0\"}'),
+(355, 'CÃ´te d\'Ivoire', 'cate-divoire', 'CI', 'CIV', '384', '225', 'XOF', 'Yamoussoukro', 'Africa', '967300', '19827000', 'Africa/Abidjan', '.ci', 'fr-CI', '', '', ''),
+(356, 'Denmark', 'denmark', 'DK', 'DNK', '208', '45', 'DKK', 'Copenhagen', 'Europe', '4750000', '6600000', 'Europe/Copenhagen', '.dk', 'da-DK,en,fo,de-DK', '5734', '42921', '{ \"default\" : \"0\"}'),
+(357, 'Djibouti', 'djibouti', 'DJ', 'DJI', '262', '253', 'DJF', 'Djibouti', 'Africa', '25900', '209000', 'Africa/Djibouti', '.dj', 'fr-DJ,ar,so-DJ,aa', '957', '23200', '{ \"default\" : \"0\"}'),
+(358, 'Dominica', 'dominica', 'DM', 'DMA', '212', '1-767', 'XCD', 'Roseau', 'North America', '28000', '109300', 'America/Dominica', '.dm', 'en-DM', '74', '750', '{ \"default\" : \"11\"}'),
+(359, 'Dominican Republic', 'dominican-republic', 'DO', 'DOM', '214', '1-809,1-829,1-84', 'DOP', 'Santo Domingo', 'North America', '2701000', '9038000', 'America/Santo_Domingo', '.do', 'es-DO', '10767', '48671', '{ \"default\" : \"11\"}'),
+(360, 'Ecuador', 'ecuador', 'EC', 'ECU', '218', '593', 'USD', 'Quito', 'South America', '3352000', '16457000', 'America/Guayaquil', '.ec', 'es-EC', '16625', '257217', '{ \"default\" : \"0\"}'),
+(361, 'Egypt', 'egypt', 'EG', 'EGY', '818', '20', 'EGP', 'Cairo', 'Africa', '20136000', '96800000', 'Africa/Cairo', '.eg', 'ar-EG,en,fr', '97553', '1002000', '{ \"default\" : \"0\"}'),
+(362, 'El Salvador', 'el-salvador', 'SV', 'SLV', '222', '503', 'USD', 'San Salvador', 'North America', '746000', '8650000', 'America/El_Salvador', '.sv', 'es-SV', '6378', '21041', '{ \"default\" : \"0\"}'),
+(363, 'Equatorial Guinea', 'equatorial-guinea', 'GQ', 'GNQ', '226', '240', 'XAF', 'Malabo', 'Africa', '14400', '501000', 'Africa/Malabo', '.gq', 'es-GQ,fr', '1268', '28052', '{ \"default\" : \"0\"}'),
+(364, 'Eritrea', 'eritrea', 'ER', 'ERI', '232', '291', 'ERN', 'Asmara', 'Africa', '200000', '305300', 'Africa/Asmara', '.er', 'aa-ER,ar,tig,kun,ti-ER', '5069', '117600', '{ \"default\" : \"0\"}'),
+(365, 'Estonia', 'estonia', 'EE', 'EST', '233', '372', 'EUR', 'Tallinn', 'Europe', '971700', '2070000', 'Europe/Tallinn', '.ee', 'et,ru', '1310', '45227', '{ \"default\" : \"0\"}'),
+(366, 'Ethiopia', 'ethiopia', 'ET', 'ETH', '231', '251', 'ETB', 'Addis Ababa', 'Africa', '447300', '20524000', 'Africa/Addis_Ababa', '.et', 'am,en-ET,om-ET,ti-ET,so-ET,sid', '104957', '1104300', '{ \"default\" : \"0\"}'),
+(367, 'Falkland Islands', 'falkland-islands', 'FK', 'FLK', '238', '500', 'FKP', 'Stanley', 'South America', '2900', '3450', 'Atlantic/Stanley', '.fk', 'en-FK', '', '', ''),
+(368, 'Faroe Islands', 'faroe-islands', 'FO', 'FRO', '234', '298', '', 'Torshavn', 'Europe', '37500', '61000', 'Atlantic/Faroe', '.fo', 'fo,da-FO', '49', '1393', '{ \"default\" : \"0\"}'),
+(369, 'Fiji', 'fiji', 'FJ', 'FJI', '242', '679', 'FJD', 'Suva', 'Oceania', '114200', '858800', 'Pacific/Fiji', '.fj', 'en-FJ,fj', '906', '18272', '{ \"default\" : \"0\"}'),
+(370, 'Finland', 'finland', 'FI', 'FIN', '246', '358', 'EUR', 'Helsinki', 'Europe', '4393000', '9320000', 'Europe/Helsinki', '.fi', 'fi-FI,sv-FI,smn', '5523', '338440', '{ \"default\" : \"00, 990, 994, 999\"}'),
+(371, 'France', 'france', 'FR', 'FRA', '250', '33', 'EUR', 'Paris', 'Europe', '45262000', '62280000', 'Europe/Paris', '.fr', 'fr-FR,frp,br,co,ca,eu,oc', '64980', '551500', '{ \"default\" : \"0\"}'),
+(372, 'French Guiana', 'french-guiana', 'GF', 'GUF', '254', '594', 'EUR', 'Cayenne', 'SA', '', '', '', '.gf', 'fr-GF', '283', '83534', '{ \"default\" : \"0\"}'),
+(373, 'French Polynesia', 'french-polynesia', 'PF', 'PYF', '258', '689', 'XPF', 'Papeete', 'Oceania', '120000', '226000', 'Pacific/Tahiti', '.pf', 'fr-PF,ty', '283', '4000', '{ \"default\" : \"0\"}'),
+(374, 'French Southern Territories', 'french-southern-territories', 'TF', 'ATF', '260', '262', '', 'Port-aux-Francais', 'AN', '', '', '', '.tf', 'fr', '', '', ''),
+(375, 'Gabon', 'gabon', 'GA', 'GAB', '266', '241', 'XAF', 'Libreville', 'Africa', '98800', '2930000', 'Africa/Libreville', '.ga', 'fr-GA', '2025', '267668', '{ \"default\" : \"0\"}'),
+(376, 'Gambia', 'gambia', 'GM', 'GMB', '270', '220', 'GMD', 'Banjul', 'Africa', '130100', '1526000', 'Africa/Banjul', '.gm', 'en-GM,mnk,wof,wo,ff', '2101', '11295', '{ \"default\" : \"0\"}'),
+(377, 'Georgia', 'georgia', 'GE', 'GEO', '268', '995', 'GEL', 'Tbilisi', 'Asia', '1300000', '4699000', 'Asia/Tbilisi', '.ge', 'ka,ru,hy,az', '3912', '69700', '{ \"default\" : \"0\"}'),
+(378, 'Germany', 'germany', 'DE', 'DEU', '276', '49', 'EUR', 'Berlin', 'Europe', '65125000', '107700000', 'Europe/Berlin', '.de', 'de', '82114', '357376', '{ \"default\" : \"0\"}'),
+(379, 'Ghana', 'ghana', 'GH', 'GHA', '288', '233', 'GHS', 'Accra', 'Africa', '1297000', '25618000', 'Africa/Accra', '.gh', 'en-GH,ak,ee,tw', '28834', '238537', '{ \"default\" : \"0\"}'),
+(380, 'Gibraltar', 'gibraltar', 'GI', 'GIB', '292', '350', 'GIP', 'Gibraltar', 'Europe', '20200', '34750', 'Europe/Gibraltar', '.gi', 'en-GI,es,it,pt', '35', '6', '{ \"default\" : \"0\"}'),
+(381, 'Greece', 'greece', 'GR', 'GRC', '300', '30', 'EUR', 'Athens', 'Europe', '4971000', '13354000', 'Europe/Athens', '.gr', 'el-GR,en,fr', '11160', '131957', '{ \"default\" : \"0\"}'),
+(382, 'Greenland', 'greenland', 'GL', 'GRL', '304', '299', 'DKK', 'Nuuk', 'North America', '36000', '59455', 'America/Godthab', '.gl', 'kl,da-GL,en', '56', '2166086', '{ \"default\" : \"0\"}'),
+(383, 'Grenada', 'grenada', 'GD', 'GRD', '308', '1-473', 'XCD', 'St. George\'s', 'North America', '25000', '128000', 'America/Grenada', '.gd', 'en-GD', '108', '345', '{ \"default\" : \"11\"}'),
+(384, 'Guadeloupe', 'guadeloupe', 'GP', 'GLP', '312', '590', 'EUR', 'Basse-Terre', 'NA', '', '', '', '.gp', 'fr-GP', '450', '1705', '{ \"default\" : \"0\"}'),
+(385, 'Guam', 'guam', 'GU', 'GUM', '316', '1-671', 'USD', 'Hagatna', 'Oceania', '90000', '98000', 'Pacific/Guam', '.gu', 'en-GU,ch-GU', '164', '549', '{ \"default\" : \"11\"}'),
+(386, 'Guatemala', 'guatemala', 'GT', 'GTM', '320', '502', 'GTQ', 'Guatemala City', 'North America', '2279000', '20787000', 'America/Guatemala', '.gt', 'es-GT', '16914', '108889', '{ \"default\" : \"0\"}'),
+(387, 'Guernsey', 'guernsey', 'GG', 'GGY', '831', '44', 'GBP', 'St Peter Port', 'Europe', '48300', '43800', 'Europe/Guernsey', '.gg', 'en,fr', '', '', ''),
+(388, 'Guinea', 'guinea', 'GN', 'GIN', '324', '224', 'GNF', 'Conakry', 'Africa', '95000', '4781000', 'Africa/Conakry', '.gn', 'fr-GN', '12717', '245857', '{ \"default\" : \"0\"}'),
+(389, 'Guinea-Bissau', 'guinea-bissau', 'GW', 'GNB', '624', '245', 'XOF', 'Bissau', 'Africa', '37100', '1100000', 'Africa/Bissau', '.gw', 'pt-GW,pov', '1861', '36125', '{ \"default\" : \"0\"}'),
+(390, 'Guyana', 'guyana', 'GY', 'GUY', '328', '592', 'GYD', 'Georgetown', 'South America', '189600', '547000', 'America/Guyana', '.gy', 'en-GY', '778', '214969', '{ \"default\" : \"1\"}'),
+(391, 'Haiti', 'haiti', 'HT', 'HTI', '332', '509', 'USD', 'Port-au-Prince', 'North America', '1000000', '6095000', 'America/Port-au-Prince', '.ht', 'ht,fr-HT', '10981', '27750', '{ \"default\" : \"0\"}'),
+(392, 'Heard & McDonald Islands', 'heard-and-mcdonald-islands', 'HM', 'HMD', '334', '672', '', '', 'AN', '', '', '', '.hm', '', '', '', ''),
+(393, 'Honduras', 'honduras', 'HN', 'HND', '340', '504', 'HNL', 'Tegucigalpa', 'North America', '731700', '7370000', 'America/Tegucigalpa', '.hn', 'es-HN', '9265', '112492', '{ \"default\" : \"0\"}'),
+(394, 'Hong Kong', 'hong-kong', 'HK', 'HKG', '344', '852', '', 'Hong Kong', 'Asia', '4873000', '16403000', 'Asia/Hong_Kong', '.hk', 'zh-HK,yue,zh,en', '', '', '{ \"default\" : \"1\"}'),
+(395, 'Hungary', 'hungary', 'HU', 'HUN', '348', '36', 'HUF', 'Budapest', 'Europe', '6176000', '11580000', 'Europe/Budapest', '.hu', 'hu-HU', '9722', '93024', '{ \"default\" : \"0\"}'),
+(396, 'Iceland', 'iceland', 'IS', 'ISL', '352', '354', 'ISK', 'Reykjavik', 'Europe', '301600', '346000', 'Atlantic/Reykjavik', '.is', 'is,en,de,da,sv,no', '335', '103000', '{ \"default\" : \"0\"}'),
+(397, 'India', 'india', 'IN', 'IND', '356', '91', 'INR', 'New Delhi', 'Asia', '61338000', '893862000', 'Asia/Kolkata', '.in', 'en-IN,hi,bn,te,mr,ta,ur,gu,kn,ml,or,pa,as,bh,sat,ks,ne,sd,kok,doi,mni,sit,sa,fr,lus,inc', '1339180', '3287263', '{ \"default\" : \"0\"}'),
+(398, 'Indonesia', 'indonesia', 'ID', 'IDN', '360', '62', 'IDR', 'Jakarta', 'Asia', '20000000', '281960000', 'Asia/Jakarta', '.id', 'id,en,nl,jv', '263991', '1910931', '{ \"default\" : \"00X\", \"carrier\": {\"001\" : \"Indosat\", \"008\" : \"Indosat\", \"007\" : \"Telkom\", \"009\" : \"Bakrie Telecom\"}}'),
+(399, 'Iran', 'iran', 'IR', 'IRN', '364', '98', 'IRR', 'Tehran', 'Asia', '8214000', '58160000', 'Asia/Tehran', '.ir', 'fa-IR,ku', '81163', '1628750', '{ \"default\" : \"0\"}'),
+(400, 'Iraq', 'iraq', 'IQ', 'IRQ', '368', '964', 'IQD', 'Baghdad', 'Asia', '325900', '26760000', 'Asia/Baghdad', '.iq', 'ar-IQ,ku,hy', '38275', '435052', '{ \"default\" : \"0\"}'),
+(401, 'Ireland', 'ireland', 'IE', 'IRL', '372', '353', 'EUR', 'Dublin', 'Europe', '3042000', '4906000', 'Europe/Dublin', '.ie', 'en-IE,ga-IE', '4762', '69797', '{ \"default\" : \"0\"}'),
+(402, 'Isle of Man', 'isle-of-man', 'IM', 'IMN', '833', '44', 'GBP', 'Douglas', 'Europe', '', '', 'Europe/Isle_of_Man', '.im', 'en,gv', '84', '572', ''),
+(403, 'Israel', 'israel', 'IL', 'ISR', '376', '972', 'ILS', 'Jerusalem', 'Asia', '4525000', '9225000', 'Asia/Jerusalem', '.il', 'he,ar-IL,en-IL,', '8322', '22072', '{ \"default\" : \"00, 012, 013, 014, 018\" }'),
+(404, 'Italy', 'italy', 'IT', 'ITA', '380', '39', 'EUR', 'Rome', 'Europe', '29235000', '97225000', 'Europe/Rome', '.it', 'it-IT,de-IT,fr-IT,sc,ca,co,sl', '59360', '302073', '{ \"default\" : \"0\"}'),
+(405, 'Jamaica', 'jamaica', 'JM', 'JAM', '388', '1-876', 'JMD', 'Kingston', 'North America', '1581000', '2665000', 'America/Jamaica', '.jm', 'en-JM', '2890', '10990', '{ \"default\" : \"11\"}'),
+(406, 'Japan', 'japan', 'JP', 'JPN', '392', '81', 'JPY', 'Tokyo', 'Asia', '99182000', '138363000', 'Asia/Tokyo', '.jp', 'ja', '127484', '377930', '{ \"default\" : \"10\"}'),
+(407, 'Jersey', 'jersey', 'JE', 'JEY', '832', '44', 'GBP', 'Saint Helier', 'Europe', '29500', '108000', 'Europe/Jersey', '.je', 'en,pt', '', '', ''),
+(408, 'Jordan', 'jordan', 'JO', 'JOR', '400', '962', 'JOD', 'Amman', 'Asia', '1642000', '8984000', 'Asia/Amman', '.jo', 'ar-JO,en', '9702', '89318', '{ \"default\" : \"0\"}'),
+(409, 'Kazakhstan', 'kazakhstan', 'KZ', 'KAZ', '398', '7', 'KZT', 'Astana', 'Asia', '5299000', '28731000', 'Asia/Almaty', '.kz', 'kk,ru', '18204', '2724902', '{ \"default\" : \"8\", \"wait\" : \"10\"}'),
+(410, 'Kenya', 'kenya', 'KE', 'KEN', '404', '254', 'KES', 'Nairobi', 'Africa', '3996000', '30732000', 'Africa/Nairobi', '.ke', 'en-KE,sw-KE', '49700', '591958', '{ \"default\": \"000, 006 to Uganda, 007 to Tanzania\"}'),
+(411, 'Kiribati', 'kiribati', 'KI', 'KIR', '296', '686', 'AUD', 'Tarawa', 'Oceania', '7800', '16000', 'Pacific/Tarawa', '.ki', 'en-KI,gil', '116', '726', '{ \"default\" : \"0\"}'),
+(412, 'Kuwait', 'kuwait', 'KW', 'KWT', '414', '965', 'KWD', 'Kuwait City', 'Asia', '1100000', '5526000', 'Asia/Kuwait', '.kw', 'ar-KW,en', '4136', '17818', '{ \"default\" : \"0\"}'),
+(413, 'Kyrgyzstan', 'kyrgyzstan', 'KG', 'KGZ', '417', '996', 'KGS', 'Bishkek', 'Asia', '2195000', '6800000', 'Asia/Bishkek', '.kg', 'ky,uz,ru', '6045', '199949', '{ \"default\" : \"0\"}'),
+(414, 'Laos', 'laos', 'LA', 'LAO', '418', '856', 'LAK', 'Vientiane', 'Asia', '300000', '6492000', 'Asia/Vientiane', '.la', 'lo,fr,en', '', '', '{ \"default\" : \"0\"}'),
+(415, 'Latvia', 'latvia', 'LV', 'LVA', '428', '371', 'EUR', 'Riga', 'Europe', '1504000', '2310000', 'Europe/Riga', '.lv', 'lv,ru,lt', '1950', '64573', '{ \"default\" : \"0\"}'),
+(416, 'Lebanon', 'lebanon', 'LB', 'LBN', '422', '961', 'LBP', 'Beirut', 'Asia', '1000000', '4000000', 'Asia/Beirut', '.lb', 'ar-LB,fr-LB,en,hy', '6082', '10452', '{ \"default\" : \"0\"}'),
+(417, 'Lesotho', 'lesotho', 'LS', 'LSO', '426', '266', 'ZAR', 'Maseru', 'Africa', '76800', '1312000', 'Africa/Maseru', '.ls', 'en-LS,st,zu,xh', '2233', '30355', '{ \"default\" : \"0\"}'),
+(418, 'Liberia', 'liberia', 'LR', 'LBR', '430', '231', 'LRD', 'Monrovia', 'Africa', '20000', '2394000', 'Africa/Monrovia', '.lr', 'en-LR', '4732', '111369', '{ \"default\" : \"0\"}'),
+(419, 'Libya', 'libya', 'LY', 'LBY', '434', '218', 'LYD', 'Tripoli', 'Africa', '353900', '9590000', 'Africa/Tripoli', '.ly', 'ar-LY,it,en', '6375', '1676198', '{ \"default\" : \"0\"}'),
+(420, 'Liechtenstein', 'liechtenstein', 'LI', 'LIE', '438', '423', 'CHF', 'Vaduz', 'Europe', '23000', '38000', 'Europe/Vaduz', '.li', 'de-LI', '38', '160', '{ \"default\" : \"0\"}'),
+(421, 'Lithuania', 'lithuania', 'LT', 'LTU', '440', '370', 'EUR', 'Vilnius', 'Europe', '1964000', '5000000', 'Europe/Vilnius', '.lt', 'lt,ru,pl', '2890', '65286', '{ \"default\" : \"0\"}'),
+(422, 'Luxembourg', 'luxembourg', 'LU', 'LUX', '442', '352', 'EUR', 'Luxembourg', 'Europe', '424500', '761300', 'Europe/Luxembourg', '.lu', 'lb,de-LU,fr-LU', '584', '2586', '{ \"default\" : \"0\"}'),
+(423, 'Macau', 'macau', 'MO', 'MAC', '446', '853', 'MOP', 'Macao', 'Asia', '270200', '1613000', 'Asia/Macau', '.mo', 'zh,zh-MO,pt', '', '', '{ \"default\" : \"0\"}'),
+(424, 'Macedonia', 'macedonia', 'MK', 'MKD', '807', '389', 'MKD', 'Skopje', 'Europe', '1057000', '2235000', 'Europe/Skopje', '.mk', 'mk,sq,tr,rmm,sr', '', '', '{ \"default\" : \"0\"}'),
+(425, 'Madagascar', 'madagascar', 'MG', 'MDG', '450', '261', 'MGA', 'Antananarivo', 'Africa', '319900', '8564000', 'Indian/Antananarivo', '.mg', 'fr-MG,mg', '25571', '587295', '{ \"default\" : \"0\"}'),
+(426, 'Malawi', 'malawi', 'MW', 'MWI', '454', '265', 'MWK', 'Lilongwe', 'Africa', '716400', '4420000', 'Africa/Blantyre', '.mw', 'ny,yao,tum,swk', '18622', '118484', '{ \"default\" : \"0\"}'),
+(427, 'Malaysia', 'malaysia', 'MY', 'MYS', '458', '60', 'MYR', 'Kuala Lumpur', 'Asia', '15355000', '41325000', 'Asia/Kuala_Lumpur', '.my', 'ms-MY,en,zh,ta,te,ml,pa,th', '31624', '330323', '{ \"default\" : \"0\"}'),
+(428, 'Maldives', 'maldives', 'MV', 'MDV', '462', '960', 'MVR', 'Male', 'Asia', '86400', '560000', 'Indian/Maldives', '.mv', 'dv,en', '436', '300', '{ \"default\" : \"0\"}'),
+(429, 'Mali', 'mali', 'ML', 'MLI', '466', '223', 'XOF', 'Bamako', 'Africa', '249800', '14613000', 'Africa/Bamako', '.ml', 'fr-ML,bm', '18542', '1240192', '{ \"default\" : \"0\"}'),
+(430, 'Malta', 'malta', 'MT', 'MLT', '470', '356', 'EUR', 'Valletta', 'Europe', '240600', '539500', 'Europe/Malta', '.mt', 'mt,en-MT', '431', '315', '{ \"default\" : \"0\"}'),
+(431, 'Marshall Islands', 'marshall-islands', 'MH', 'MHL', '584', '692', 'USD', 'Majuro', 'Oceania', '2200', '3800', 'Pacific/Majuro', '.mh', 'mh,en-MH', '53', '181', '{ \"default\" : \"11\"}'),
+(432, 'Martinique', 'martinique', 'MQ', 'MTQ', '474', '596', 'EUR', 'Fort-de-France', 'NA', '', '', '', '.mq', 'fr-MQ', '385', '1128', '{ \"default\" : \"0\"}'),
+(433, 'Mauritania', 'mauritania', 'MR', 'MRT', '478', '222', 'MRO', 'Nouakchott', 'Africa', '75000', '4024000', 'Africa/Nouakchott', '.mr', 'ar-MR,fuc,snk,fr,mey,wo', '4420', '1030700', '{ \"default\" : \"0\"}'),
+(434, 'Mauritius', 'mauritius', 'MU', 'MUS', '480', '230', 'MUR', 'Port Louis', 'Africa', '290000', '1485000', 'Indian/Mauritius', '.mu', 'en-MU,bho,fr', '1265', '1969', '{ \"default\" : \"0\"}'),
+(435, 'Mayotte', 'mayotte', 'YT', 'MYT', '175', '262', 'EUR', 'Mamoudzou', 'Africa', '', '', 'Indian/Mayotte', '.yt', 'fr-YT', '253', '-99', '{ \"default\" : \"0\"}'),
+(436, 'Mexico', 'mexico', 'MX', 'MEX', '484', '52', 'MXN', 'Mexico City', 'North America', '31020000', '100786000', 'America/Mexico_City', '.mx', 'es-MX', '129163', '1964375', '{ \"default\" : \"0\"}'),
+(437, 'Micronesia', 'micronesia', 'FM', 'FSM', '583', '691', 'USD', 'Palikir', 'Oceania', '17000', '27600', 'Pacific/Pohnpei', '.fm', 'en-FM,chk,pon,yap,kos,uli,woe,nkr,kpg', '', '', '{ \"default\" : \"11\"}'),
+(438, 'Moldova', 'moldova', 'MD', 'MDA', '498', '373', 'MDL', 'Chisinau', 'Europe', '1333000', '4080000', 'Europe/Chisinau', '.md', 'ro,ru,gag,tr', '', '', '{ \"default\" : \"0\"}'),
+(439, 'Monaco', 'monaco', 'MC', 'MCO', '492', '377', 'EUR', 'Monaco', 'Europe', '23000', '33200', 'Europe/Monaco', '.mc', 'fr-MC,en,it', '39', '2', '{ \"default\" : \"0\"}'),
+(440, 'Mongolia', 'mongolia', 'MN', 'MNG', '496', '976', 'MNT', 'Ulan Bator', 'Asia', '330000', '3375000', 'Asia/Ulaanbaatar', '.mn', 'mn,ru', '3076', '1564116', '{ \"default\" : \"1\"}'),
+(441, 'Montenegro', 'montenegro', 'ME', 'MNE', '499', '382', 'EUR', 'Podgorica', 'Europe', '280000', '1126000', 'Europe/Podgorica', '.me', 'sr,hu,bs,sq,hr,rom', '629', '13812', '{ \"default\" : \"0\"}'),
+(442, 'Montserrat', 'montserrat', 'MS', 'MSR', '500', '1-664', 'XCD', 'Plymouth', 'North America', '1200', '4000', 'America/Montserrat', '.ms', 'en-MS', '5', '103', '{ \"default\" : \"11\"}'),
+(443, 'Morocco', 'morocco', 'MA', 'MAR', '504', '212', 'MAD', 'Rabat', 'Africa', '13213000', '39016000', 'Africa/Casablanca', '.ma', 'ar-MA,ber,fr', '35740', '446550', '{ \"default\" : \"0\"}'),
+(444, 'Mozambique', 'mozambique', 'MZ', 'MOZ', '508', '258', 'MZN', 'Maputo', 'Africa', '613600', '8108000', 'Africa/Maputo', '.mz', 'pt-MZ,vmw', '29669', '799380', '{ \"default\" : \"0\"}'),
+(445, 'Myanmar', 'myanmar', 'MM', 'MMR', '104', '95', 'MMK', 'Nay Pyi Taw', 'Asia', '110000', '5440000', 'Asia/Rangoon', '.mm', 'my', '53371', '676577', '{ \"default\" : \"0\"}'),
+(446, 'Namibia', 'namibia', 'NA', 'NAM', '516', '264', 'ZAR', 'Windhoek', 'Africa', '127500', '2435000', 'Africa/Windhoek', '.na', 'en-NA,af,de,hz,naq', '2534', '824116', '{ \"default\" : \"0\"}'),
+(447, 'Nauru', 'nauru', 'NR', 'NRU', '520', '674', 'AUD', 'Yaren', 'Oceania', '', '6800', 'Pacific/Nauru', '.nr', 'na,en-NR', '11', '21', '{ \"default\" : \"0\"}'),
+(448, 'Nepal', 'nepal', 'NP', 'NPL', '524', '977', 'NPR', 'Kathmandu', 'Asia', '577800', '18138000', 'Asia/Kathmandu', '.np', 'ne,en', '29305', '147181', '{ \"default\" : \"0\"}'),
+(449, 'Netherlands', 'netherlands', 'NL', 'NLD', '528', '31', 'EUR', 'Amsterdam', 'Europe', '14872000', '19643000', 'Europe/Amsterdam', '.nl', 'nl-NL,fy-NL', '17036', '41542', '{ \"default\" : \"0\"}'),
+(450, 'New Caledonia', 'new-caledonia', 'NC', 'NCL', '540', '687', 'XPF', 'Noumea', 'Oceania', '85000', '231000', 'Pacific/Noumea', '.nc', 'fr-NC', '276', '18575', '{ \"default\" : \"0\"}'),
+(451, 'New Zealand', 'new-zealand', 'NZ', 'NZL', '554', '64', 'NZD', 'Wellington', 'Oceania', '3400000', '4922000', 'Pacific/Auckland', '.nz', 'en-NZ,mi', '4706', '268107', '{ \"default\" : \"0\"}'),
+(452, 'Nicaragua', 'nicaragua', 'NI', 'NIC', '558', '505', 'NIO', 'Managua', 'North America', '199800', '5346000', 'America/Managua', '.ni', 'es-NI,en', '6218', '130373', '{ \"default\" : \"0\"}'),
+(453, 'Niger', 'niger', 'NE', 'NER', '562', '227', 'XOF', 'Niamey', 'Africa', '115900', '5400000', 'Africa/Niamey', '.ne', 'fr-NE,ha,kr,dje', '21477', '1267000', '{ \"default\" : \"0\"}'),
+(454, 'Nigeria', 'nigeria', 'NG', 'NGA', '566', '234', 'NGN', 'Abuja', 'Africa', '43989000', '112780000', 'Africa/Lagos', '.ng', 'en-NG,ha,yo,ig,ff', '190886', '923768', '{ \"default\" : \"9\"}'),
+(455, 'Niue', 'niue', 'NU', 'NIU', '570', '683', 'NZD', 'Alofi', 'Oceania', '1100', '', 'Pacific/Niue', '.nu', 'niu,en-NU', '2', '260', '{ \"default\" : \"0\"}'),
+(456, 'Norfolk Island', 'norfolk-island', 'NF', 'NFK', '574', '672', 'AUD', 'Kingston', 'OC', '', '', '', '.nf', 'en-NF', '', '', '{ \"default\" : \"0\"}'),
+(457, 'North Korea', 'north-korea', 'KP', 'PRK', '408', '850', 'KPW', 'Pyongyang', 'Asia', '', '1700000', 'Asia/Pyongyang', '.kp', 'ko-KP', '', '', '{ \"default\" : \"99\"}'),
+(458, 'Northern Mariana Islands', 'northern-mariana-islands', 'MP', 'MNP', '580', '1-670', 'USD', 'Saipan', 'Oceania', '', '', 'Pacific/Saipan', '.mp', 'fil,tl,zh,ch-MP,en-MP', '55', '457', ''),
+(459, 'Norway', 'norway', 'NO', 'NOR', '578', '47', 'NOK', 'Oslo', 'Europe', '4431000', '5732000', 'Europe/Oslo', '.no', 'no,nb,nn,se,fi', '5305', '386194', '{ \"default\" : \"0\"}'),
+(460, 'Oman', 'oman', 'OM', 'OMN', '512', '968', 'OMR', 'Muscat', 'Asia', '1465000', '5278000', 'Asia/Muscat', '.om', 'ar-OM,en,bal,ur', '4636', '309500', '{ \"default\" : \"0\"}'),
+(461, 'Pakistan', 'pakistan', 'PK', 'PAK', '586', '92', 'PKR', 'Islamabad', 'Asia', '20431000', '125000000', 'Asia/Karachi', '.pk', 'ur-PK,en-PK,pa,sd,ps,brh', '197016', '796095', '{ \"default\" : \"0\"}'),
+(462, 'Palau', 'palau', 'PW', 'PLW', '585', '680', 'USD', 'Melekeok', 'Oceania', '', '17150', 'Pacific/Palau', '.pw', 'pau,sov,en-PW,tox,ja,fil,zh', '22', '459', '{ \"default\" : \"11\"}'),
+(463, 'Palestine', 'palestine', 'PS', 'PSE', '275', '970', '', 'East Jerusalem', 'Asia', '1379000', '3041000', 'Asia/Hebron', '.ps', 'ar-PS', '', '', '{ \"default\" : \"0\"}'),
+(464, 'Panama', 'panama', 'PA', 'PAN', '591', '507', 'USD', 'Panama City', 'North America', '959800', '6770000', 'America/Panama', '.pa', 'es-PA,en', '4099', '75320', '{ \"default\" : \"0\"}'),
+(465, 'Papua New Guinea', 'papua-new-guinea', 'PG', 'PNG', '598', '675', 'PGK', 'Port Moresby', 'Oceania', '125000', '2709000', 'Pacific/Port_Moresby', '.pg', 'en-PG,ho,meu,tpi', '8251', '462840', '{ \"default\" : \"0\"}'),
+(466, 'Paraguay', 'paraguay', 'PY', 'PRY', '600', '595', 'PYG', 'Asuncion', 'South America', '1105000', '6790000', 'America/Asuncion', '.py', 'es-PY,gn', '6811', '406752', '{ \"default\" : \"0\"}'),
+(467, 'Peru', 'peru', 'PE', 'PER', '604', '51', 'PEN', 'Lima', 'South America', '9158000', '29400000', 'America/Lima', '.pe', 'es-PE,qu,ay', '32166', '1285216', '{ \"default\" : \"0\"}'),
+(468, 'Philippines', 'philippines', 'PH', 'PHL', '608', '63', 'PHP', 'Manila', 'Asia', '8278000', '103000000', 'Asia/Manila', '.ph', 'tl,en-PH,fil', '104918', '300000', '{ \"default\" : \"0\"}'),
+(469, 'Pitcairn Islands', 'pitcairn-islands', 'PN', 'PCN', '612', '870', 'NZD', 'Adamstown', 'Oceania', '', '', 'Pacific/Pitcairn', '.pn', 'en-PN', '', '', ''),
+(470, 'Poland', 'poland', 'PL', 'POL', '616', '48', 'PLN', 'Warsaw', 'Europe', '22452000', '50840000', 'Europe/Warsaw', '.pl', 'pl', '38171', '312679', '{ \"default\" : \"0\"}'),
+(471, 'Portugal', 'portugal', 'PT', 'PRT', '620', '351', 'EUR', 'Lisbon', 'Europe', '5168000', '12312000', 'Europe/Lisbon', '.pt', 'pt-PT,mwl', '10330', '92226', '{ \"default\" : \"0\"}'),
+(472, 'Puerto Rico', 'puerto-rico', 'PR', 'PRI', '630', '1', 'USD', 'San Juan', 'North America', '1000000', '3060000', 'America/Puerto_Rico', '.pr', 'en-PR,es-PR', '3663', '8868', '{ \"default\" : \"11\"}'),
+(473, 'Qatar', 'qatar', 'QA', 'QAT', '634', '974', 'QAR', 'Doha', 'Asia', '563800', '2600000', 'Asia/Qatar', '.qa', 'ar-QA,es', '2639', '11607', '{ \"default\" : \"0\"}'),
+(474, 'Romania', 'romania', 'RO', 'ROU', '642', '40', 'RON', 'Bucharest', 'Europe', '7787000', '22700000', 'Europe/Bucharest', '.ro', 'ro,hu,rom', '19679', '238391', '{ \"default\" : \"0\"}'),
+(475, 'Russia', 'russia', 'RU', 'RUS', '643', '7', 'RUB', 'Moscow', 'Europe', '40853000', '261900000', 'Europe/Moscow', '.ru', 'ru,tt,xal,cau,ady,kv,ce,tyv,cv,udm,tut,mns,bua,myv,mdf,chm,ba,inh,tut,kbd,krc,ava,sah,nog', '143990', '17098246', '{ \"default\" : \"8\", \"wait\": \"10\"}'),
+(476, 'Rwanda', 'rwanda', 'RW', 'RWA', '646', '250', 'RWF', 'Kigali', 'Africa', '450000', '5690000', 'Africa/Kigali', '.rw', 'rw,en-RW,fr-RW,sw', '12208', '26338', '{ \"default\" : \"0\"}'),
+(477, 'RÃ©union', 'ra-c-union', 'RE', 'REU', '638', '262', 'EUR', 'Saint-Denis', 'Africa', '', '', 'Indian/Reunion', '.re', 'fr-RE', '', '', ''),
+(478, 'Samoa', 'samoa', 'WS', 'WSM', '882', '685', 'WST', 'Apia', 'Oceania', '9000', '167400', 'Pacific/Apia', '.ws', 'sm,en-WS', '196', '2842', '{ \"default\" : \"0\"}'),
+(479, 'San Marino', 'san-marino', 'SM', 'SMR', '674', '378', 'EUR', 'San Marino', 'Europe', '17000', '36000', 'Europe/San_Marino', '.sm', 'it-SM', '33', '61', '{ \"default\" : \"0\"}'),
+(480, 'Saudi Arabia', 'saudi-arabia', 'SA', 'SAU', '682', '966', 'SAR', 'Riyadh', 'Asia', '9774000', '53000000', 'Asia/Riyadh', '.sa', 'ar-SA', '32938', '2206714', '{ \"default\" : \"0\"}'),
+(481, 'Senegal', 'senegal', 'SN', 'SEN', '686', '221', 'XOF', 'Dakar', 'Africa', '1818000', '11470000', 'Africa/Dakar', '.sn', 'fr-SN,wo,fuc,mnk', '15851', '196712', '{ \"default\" : \"0\"}'),
+(482, 'Serbia', 'serbia', 'RS', 'SRB', '688', '381 p', 'RSD', 'Belgrade', 'Europe', '4107000', '9138000', 'Europe/Belgrade', '.rs', 'sr,hu,bs,rom', '8791', '88499', '{ \"default\" : \"0\"}'),
+(483, 'Seychelles', 'seychelles', 'SC', 'SYC', '690', '248', 'SCR', 'Victoria', 'Africa', '32000', '138300', 'Indian/Mahe', '.sc', 'en-SC,fr-SC', '95', '457', '{ \"default\" : \"0\"}'),
+(484, 'Sierra Leone', 'sierra-leone', 'SL', 'SLE', '694', '232', 'SLL', 'Freetown', 'Africa', '14900', '2210000', 'Africa/Freetown', '.sl', 'en-SL,men,tem', '7557', '72300', '{ \"default\" : \"0\"}'),
+(485, 'Singapore', 'singapore', 'SG', 'SGP', '702', '65', 'SGD', 'Singapore', 'Asia', '3235000', '8063000', 'Asia/Singapore', '.sg', 'cmn,en-SG,ms-SG,ta-SG,zh-SG', '5709', '719', '{ \"default\" : \"001, 008\"}'),
+(486, 'Sint Maarten', 'sint-maarten', 'SX', 'SXM', '534', '1-721', 'ANG', 'Philipsburg', 'North America', '', '', 'America/Lower_Princes', '.sx', 'nl,en', '', '', '{ \"default\" : \"0\"}'),
+(487, 'Slovakia', 'slovakia', 'SK', 'SVK', '703', '421', 'EUR', 'Bratislava', 'Europe', '4063000', '6095000', 'Europe/Bratislava', '.sk', 'sk,hu', '5448', '49035', '{ \"default\" : \"0\"}'),
+(488, 'Slovenia', 'slovenia', 'SI', 'SVN', '705', '386', 'EUR', 'Ljubljana', 'Europe', '1298000', '2246000', 'Europe/Ljubljana', '.si', 'sl,sh', '2080', '20273', '{ \"default\" : \"0\"}'),
+(489, 'Solomon Islands', 'solomon-islands', 'SB', 'SLB', '90', '677', 'SBD', 'Honiara', 'Oceania', '10000', '302100', 'Pacific/Guadalcanal', '.sb', 'en-SB,tpi', '611', '28896', '{ \"default\" : \"0\"}'),
+(490, 'Somalia', 'somalia', 'SO', 'SOM', '706', '252', 'SOS', 'Mogadishu', 'Africa', '106000', '658000', 'Africa/Mogadishu', '.so', 'so-SO,ar-SO,it,en-SO', '14742', '637657', '{ \"default\" : \"0\"}'),
+(491, 'South Africa', 'south-africa', 'ZA', 'ZAF', '710', '27', 'ZAR', 'Pretoria', 'Africa', '4420000', '68400000', 'Africa/Johannesburg', '.za', 'zu,xh,af,nso,en-ZA,tn,st,ts,ss,ve,nr', '56717', '1221037', '{ \"default\" : \"0\"}'),
+(492, 'South Georgia & South Sandwich Islands', 'south-georgia-and-south-sandwich-islands', 'GS', 'SGS', '239', '500', '', 'Grytviken', 'AN', '', '', '', '.gs', 'en', '', '', ''),
+(493, 'South Korea', 'south-korea', 'KR', 'KOR', '410', '82', 'KRW', 'Seoul', 'Asia', '39400000', '53625000', 'Asia/Seoul', '.kr', 'ko-KR,en', '', '', '{ \"default\" : \"001, 002\"}'),
+(494, 'South Sudan', 'south-sudan', 'SS', 'SSD', '728', '211', 'SSP', 'Juba', 'Africa', '', '2000000', 'Africa/Juba', '', 'en', '12576', '658841', '{ \"default\" : \"0\"}'),
+(495, 'Spain', 'spain', 'ES', 'ESP', '724', '34', 'EUR', 'Madrid', 'Europe', '28119000', '50663000', 'Europe/Madrid', '.es', 'es-ES,ca,gl,eu,oc', '46354', '505944', '{ \"default\" : \"0\"}'),
+(496, 'Sri Lanka', 'sri-lanka', 'LK', 'LKA', '144', '94', 'LKR', 'Colombo', 'Asia', '1777000', '19533000', 'Asia/Colombo', '.lk', 'si,ta,en', '20877', '65610', '{ \"default\" : \"0\"}'),
+(497, 'Saint BarthÃ©lemy', 'saint-bartha-c-lemy', 'BL', 'BLM', '652', '590', 'EUR', 'Gustavia', 'North America', '', '', 'America/St_Barthelemy', '.gp', 'fr', '', '', ''),
+(498, 'St. Helena', 'st-helena', 'SH', 'SHN', '654', '290 n', 'SHP', 'Jamestown', 'Africa', '', '', 'Atlantic/St_Helena', '.sh', 'en-SH', '', '', ''),
+(499, 'St. Kitts & Nevis', 'st-kitts-and-nevis', 'KN', 'KNA', '659', '1-869', 'XCD', 'Basseterre', 'North America', '17000', '84000', 'America/St_Kitts', '.kn', 'en-KN', '', '', ''),
+(500, 'St. Lucia', 'st-lucia', 'LC', 'LCA', '662', '1-758', 'XCD', 'Castries', 'North America', '142900', '227000', 'America/St_Lucia', '.lc', 'en-LC', '', '', ''),
+(501, 'St. Martin', 'st-martin', 'MF', 'MAF', '663', '590', 'EUR', 'Marigot', 'North America', '', '', 'America/Marigot', '.gp', 'fr', '', '', ''),
+(502, 'St. Pierre & Miquelon', 'st-pierre-and-miquelon', 'PM', 'SPM', '666', '508', 'EUR', 'Saint-Pierre', 'North America', '', '', 'America/Miquelon', '.pm', 'fr-PM', '', '', ''),
+(503, 'St. Vincent & Grenadines', 'st-vincent-and-grenadines', 'VC', 'VCT', '670', '1-784', 'XCD', 'Kingstown', 'North America', '76000', '135500', 'America/St_Vincent', '.vc', 'en-VC,fr', '', '', ''),
+(504, 'Sudan', 'sudan', 'SD', 'SDN', '729', '249', 'SDG', 'Khartoum', 'Africa', '4200000', '27659000', 'Africa/Khartoum', '.sd', 'ar-SD,en,fia', '40533', '-99', '{ \"default\" : \"0\"}'),
+(505, 'Suriname', 'suriname', 'SR', 'SUR', '740', '597', 'SRD', 'Paramaribo', 'South America', '163000', '977000', 'America/Paramaribo', '.sr', 'nl-SR,en,srn,hns,jv', '563', '163820', '{ \"default\" : \"0\"}'),
+(506, 'Svalbard & Jan Mayen', 'svalbard-and-jan-mayen', 'SJ', 'SJM', '744', '47', 'NOK', 'Longyearbyen', 'Europe', '', '', 'Arctic/Longyearbyen', '.sj', 'no,ru', '', '', ''),
+(507, 'Swaziland', 'swaziland', 'SZ', 'SWZ', '748', '268', 'SZL', 'Mbabane', 'Africa', '90100', '805000', 'Africa/Mbabane', '.sz', 'en-SZ,ss-SZ', '1367', '17363', '{ \"default\" : \"0\"}'),
+(508, 'Sweden', 'sweden', 'SE', 'SWE', '752', '46', 'SEK', 'Stockholm', 'Europe', '8398000', '11643000', 'Europe/Stockholm', '.se', 'sv-SE,se,sma,fi-SE', '9911', '438574', '{ \"default\" : \"0\"}'),
+(509, 'Switzerland', 'switzerland', 'CH', 'CHE', '756', '41', 'CHF', 'Bern', 'Europe', '6152000', '10460000', 'Europe/Zurich', '.ch', 'de-CH,fr-CH,it-CH,rm', '8476', '41291', '{ \"default\" : \"0\"}'),
+(510, 'Syria', 'syria', 'SY', 'SYR', '760', '963', 'SYP', 'Damascus', 'Asia', '4469000', '12928000', 'Asia/Damascus', '.sy', 'ar-SY,ku,hy,arc,fr,en', '', '', '{ \"default\" : \"0\"}'),
+(511, 'Sao Tome and Principe', 'sao-tome-and-principe', 'ST', 'STP', '678', '239', 'STD', 'Sao Tome', 'Africa', '26700', '122000', 'Africa/Sao_Tome', '.st', 'pt-ST', '204', '964', '{ \"default\" : \"0\"}'),
+(512, 'Taiwan', 'taiwan', 'TW', 'TWN', '158', '886', '', 'Taipei', 'Asia', '16147000', '29455000', 'Asia/Taipei', '.tw', 'zh-TW,zh,nan,hak', '', '', '{ \"default\" : \"2\"}'),
+(513, 'Tajikistan', 'tajikistan', 'TJ', 'TJK', '762', '992', 'TJS', 'Dushanbe', 'Asia', '700000', '6528000', 'Asia/Dushanbe', '.tj', 'tg,ru', '8921', '142600', '{ \"default\" : \"8\", \"wait\" : \"10\"}'),
+(514, 'Tanzania', 'tanzania', 'TZ', 'TZA', '834', '255', 'TZS', 'Dodoma', 'Africa', '678000', '27220000', 'Africa/Dar_es_Salaam', '.tz', 'sw-TZ,en,ar', '', '', '{ \"default\" : \"0\"}'),
+(515, 'Thailand', 'thailand', 'TH', 'THA', '764', '66', 'THB', 'Bangkok', 'Asia', '17483000', '84075000', 'Asia/Bangkok', '.th', 'th,en', '69038', '513120', '{ \"default\" : \"1\"}'),
+(516, 'Timor-Leste', 'timor-leste', 'TL', 'TLS', '626', '670', 'USD', 'Dili', 'Oceania', '2100', '621000', 'Asia/Dili', '.tl', 'tet,pt-TL,id,en', '1296', '14919', ''),
+(517, 'Togo', 'togo', 'TG', 'TGO', '768', '228', 'XOF', 'Lome', 'Africa', '356300', '3518000', 'Africa/Lome', '.tg', 'fr-TG,ee,hna,kbp,dag,ha', '7798', '56785', '{ \"default\" : \"0\"}'),
+(518, 'Tokelau', 'tokelau', 'TK', 'TKL', '772', '690', 'NZD', '', 'Oceania', '800', '', 'Pacific/Fakaofo', '.tk', 'tkl,en-TK', '1', '12', '{ \"default\" : \"0\"}'),
+(519, 'Tonga', 'tonga', 'TO', 'TON', '776', '676', 'TOP', 'Nuku\'alofa', 'Oceania', '8400', '56000', 'Pacific/Tongatapu', '.to', 'to,en-TO', '108', '747', '{ \"default\" : \"0\"}'),
+(520, 'Trinidad & Tobago', 'trinidad-and-tobago', 'TT', 'TTO', '780', '1-868', 'TTD', 'Port of Spain', 'North America', '593000', '1884000', 'America/Port_of_Spain', '.tt', 'en-TT,hns,fr,es,zh', '', '', '{\"default\" : \"011\"}'),
+(521, 'Tunisia', 'tunisia', 'TN', 'TUN', '788', '216', 'TND', 'Tunis', 'Africa', '3500000', '12840000', 'Africa/Tunis', '.tn', 'ar-TN,fr', '11532', '163610', '{ \"default\" : \"0\"}'),
+(522, 'Turkey', 'turkey', 'TR', 'TUR', '792', '90', 'TRY', 'Ankara', 'Asia', '27233000', '67680000', 'Europe/Istanbul', '.tr', 'tr-TR,ku,diq,az,av', '80745', '783562', '{ \"default\" : \"0\"}'),
+(523, 'Turkmenistan', 'turkmenistan', 'TM', 'TKM', '795', '993', 'TMT', 'Ashgabat', 'Asia', '80400', '3953000', 'Asia/Ashgabat', '.tm', 'tk,ru,uz', '5758', '488100', '{ \"default\" : \"8\" ,\"wait\" : \"10\"}'),
+(524, 'Turks & Caicos Islands', 'turks-and-caicos-islands', 'TC', 'TCA', '796', '1-649', 'USD', 'Cockburn Town', 'North America', '', '', 'America/Grand_Turk', '.tc', 'en-TC', '', '', ''),
+(525, 'Tuvalu', 'tuvalu', 'TV', 'TUV', '798', '688', 'AUD', 'Funafuti', 'Oceania', '4200', '2800', 'Pacific/Funafuti', '.tv', 'tvl,en,sm,gil', '11', '26', '{ \"default\" : \"0\"}'),
+(526, 'U.S. Outlying Islands', 'us-outlying-islands', 'UM', 'UMI', '581', '', '', '', 'OC', '', '', '', '.um', 'en-UM', '', '', ''),
+(527, 'U.S. Virgin Islands', 'us-virgin-islands', 'VI', 'VIR', '850', '1-340', 'USD', 'Charlotte Amalie', 'North America', '30000', '80300', 'America/St_Thomas', '.vi', 'en-VI', '', '', '{ \"default\" : \"11\"}'),
+(528, 'UK', 'uk', 'GB', 'GBR', '826', '44', 'GBP', 'London', 'Europe', '51444000', '82109000', 'Europe/London', '.uk', 'en-GB,cy-GB,gd', '66182', '242495', '{ \"default\" : \"00\"}'),
+(529, 'US', 'us', 'US', 'USA', '840', '1', 'USD', 'Washington', 'North America', '245000000', '310000000', 'America/New_York', '.us', 'en-US,es-US,haw,fr', '324460', '9833517', '{ \"default\":\"011\" }'),
+(530, 'Uganda', 'uganda', 'UG', 'UGA', '800', '256', 'UGX', 'Kampala', 'Africa', '3200000', '16355000', 'Africa/Kampala', '.ug', 'en-UG,lg,sw,ar', '42863', '241550', '{ \"default\" : \"0\"}'),
+(531, 'Ukraine', 'ukraine', 'UA', 'UKR', '804', '380', 'UAH', 'Kiev', 'Europe', '7770000', '59344000', 'Europe/Kiev', '.ua', 'uk,ru-UA,rom,pl,hu', '44223', '603500', '{ \"default\" : \"0\"}'),
+(532, 'United Arab Emirates', 'united-arab-emirates', 'AE', 'ARE', '784', '971', 'AED', 'Abu Dhabi', 'Asia', '3449000', '13775000', 'Asia/Dubai', '.ae', 'ar-AE,fa,en,hi,ur', '9400', '83600', '{ \"default\" : \"0\"}'),
+(533, 'Uruguay', 'uruguay', 'UY', 'URY', '858', '598', 'UYU', 'Montevideo', 'South America', '1405000', '5000000', 'America/Montevideo', '.uy', 'es-UY', '3457', '173626', '{ \"default\" : \"0\"}'),
+(534, 'Uzbekistan', 'uzbekistan', 'UZ', 'UZB', '860', '998', 'UZS', 'Tashkent', 'Asia', '4689000', '20274000', 'Asia/Tashkent', '.uz', 'uz,ru,tg', '31911', '448969', '{ \"default\" : \"0\"}'),
+(535, 'Vanuatu', 'vanuatu', 'VU', 'VUT', '548', '678', 'VUV', 'Port Vila', 'Oceania', '17000', '137000', 'Pacific/Efate', '.vu', 'bi,en-VU,fr-VU', '276', '12189', '{ \"default\" : \"0\"}'),
+(536, 'Vatican City', 'vatican-city', 'VA', 'VAT', '336', '39-06', 'EUR', 'Vatican City', 'Europe', '', '', 'Europe/Vatican', '.va', 'la,it,fr', '', '', '{ \"default\" : \"0\"}'),
+(537, 'Venezuela', 'venezuela', 'VE', 'VEN', '862', '58', 'VEF', 'Caracas', 'South America', '8918000', '30520000', 'America/Caracas', '.ve', 'es-VE', '', '', '{ \"default\" : \"0\"}'),
+(538, 'Vietnam', 'vietnam', 'VN', 'VNM', '704', '84', 'VND', 'Hanoi', 'Asia', '23382000', '134066000', 'Asia/Ho_Chi_Minh', '.vn', 'vi,en,fr,zh,km', '95541', '330967', '{ \"default\" : \"0\"}'),
+(539, 'Wallis & Futuna', 'wallis-and-futuna', 'WF', 'WLF', '876', '681', 'XPF', 'Mata Utu', 'Oceania', '1300', '', 'Pacific/Wallis', '.wf', 'wls,fud,fr-WF', '', '', '{ \"default\" : \"00\" }'),
+(540, 'Western Sahara', 'western-sahara', 'EH', 'ESH', '732', '212', 'MAD', 'El-Aaiun', 'Africa', '', '', 'Africa/El_Aaiun', '.eh', 'ar,mey', '553', '266000', ''),
+(541, 'Yemen', 'yemen', 'YE', 'YEM', '887', '967', 'YER', 'Sanaa', 'Asia', '2349000', '13900000', 'Asia/Aden', '.ye', 'ar-YE', '28250', '527968', '{ \"default\" : \"0\"}'),
+(542, 'Zambia', 'zambia', 'ZM', 'ZMB', '894', '260', 'ZMW', 'Lusaka', 'Africa', '816200', '10525000', 'Africa/Lusaka', '.zm', 'en-ZM,bem,loz,lun,lue,ny,toi', '17094', '752612', '{ \"default\" : \"0\"}'),
+(543, 'Zimbabwe', 'zimbabwe', 'ZW', 'ZWE', '716', '263', 'ZWL', 'Harare', 'Africa', '1423000', '12614000', 'Africa/Harare', '.zw', 'en-ZW,sn,nr,nd', '16530', '390757', '{ \"default\" : \"0\"}'),
+(544, 'Ãƒland Islands', 'afland-islands', 'AX', 'ALA', '248', '358', 'EUR', 'Mariehamn', 'EU', '', '', '', '.ax', 'sv-AX', '', '', ''),
+(545, 'Afghanistan', 'afghanistan', 'AF', 'AFG', '4', '93', 'AFN', 'Kabul', 'Asia', '1000000', '18000000', 'Asia/Kabul', '.af', 'fa-AF,ps,uz-AF,tk', '35530', '652864', '{ \"default\" : \"0\"}'),
+(546, 'Albania', 'albania', 'AL', 'ALB', '8', '355', 'ALL', 'Tirana', 'Europe', '1300000', '3500000', 'Europe/Tirane', '.al', 'sq,el', '2930', '28748', '{ \"default\" : \"0\"}'),
+(547, 'Algeria', 'algeria', 'DZ', 'DZA', '12', '213', 'DZD', 'Algiers', 'Africa', '4700000', '37692000', 'Africa/Algiers', '.dz', 'ar-DZ', '41318', '2381741', '{ \"default\" : \"0\"}'),
+(548, 'American Samoa', 'american-samoa', 'AS', 'ASM', '16', '1-684', 'USD', 'Pago Pago', 'Oceania', '', '', 'Pacific/Pago_Pago', '.as', 'en-AS,sm,to', '56', '199', '{ \"default\" : \"11\"}'),
+(549, 'Andorra', 'andorra', 'AD', 'AND', '20', '376', 'EUR', 'Andorra la Vella', 'Europe', '67100', '65000', 'Europe/Andorra', '.ad', 'ca', '77', '468', '{ \"default\" : \"0\"}');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `world_country`
+--
+ALTER TABLE `world_country`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `c_al_2_code` (`c_al_2_code`),
+  ADD KEY `c_slug` (`c_slug`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `world_country`
+--
+ALTER TABLE `world_country`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=550;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
